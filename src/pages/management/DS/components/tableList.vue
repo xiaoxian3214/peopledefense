@@ -1,0 +1,160 @@
+<template>
+  <div class="table-box">
+    <el-table
+      :data="tableData"
+      :row-style="{ height: '54px' }"
+      :header-row-style="{ height: '54px' }"
+      :header-cell-style="{ background: '#F5F6FA' }"
+      :cell-style="{ padding: '0' }"
+      ref="table"
+    >
+      <el-table-column
+        label="ID"
+        prop="id"
+        :show-overflow-tooltip="true"
+        align="center"
+      ></el-table-column>
+      <el-table-column
+        prop="administrativeCode"
+        label="行政区代码"
+        :show-overflow-tooltip="true"
+        align="center"
+      >
+      </el-table-column>
+      <el-table-column
+        label="专业队伍名称"
+        prop="professionalTeamName"
+        :show-overflow-tooltip="true"
+        align="center"
+      ></el-table-column>
+      <el-table-column
+        label="姓名"
+        prop="name"
+        :show-overflow-tooltip="true"
+        align="center"
+      ></el-table-column>
+      <el-table-column
+        label="性别"
+        prop="sex"
+        :show-overflow-tooltip="true"
+        align="center"
+      >
+        <!-- <template slot-scope="scope">{{
+          app.filterSex(scope.row.sex)
+        }}</template> -->
+      </el-table-column>
+      <el-table-column
+        label="联系电话"
+        prop="phone"
+        :show-overflow-tooltip="true"
+        align="center"
+      ></el-table-column>
+      <el-table-column
+        label="入队日期"
+        prop="intoTeamDate"
+        :show-overflow-tooltip="true"
+        align="center"
+      ></el-table-column>
+      <el-table-column
+        label="主管单位"
+        prop="buildUnit"
+        :show-overflow-tooltip="true"
+        align="center"
+      ></el-table-column>
+      <el-table-column
+        label="是否服兵役"
+        prop="isRetired"
+        :show-overflow-tooltip="true"
+        align="center"
+      >
+        <template slot-scope="scope">
+          {{ scope.row.isRetired ? "是" : "否" }}
+        </template>
+      </el-table-column>
+    </el-table>
+  </div>
+</template>
+<script>
+export default {
+  // inject: ["app"],
+  props: {
+    tableData: {
+      type: Array,
+      default: () => [],
+    },
+  },
+  data() {
+    return {};
+  },
+  mounted() {},
+  methods: {
+    delet(val) {
+      // console.log(val,111);
+      this.$emit("delet", val);
+    },
+    edit(val) {
+      this.$router.push("/pages/management/DS/edit?id=" + val.id);
+    },
+    detail(val) {
+      this.$router.push("/pages/management/DS/detail?id=" + val.id);
+    },
+  },
+};
+</script>
+<style lang="scss" scoped>
+::v-deep {
+  .el-table .DisabledSelection .cell .el-checkbox__inner {
+    margin-left: 25px;
+    position: relative;
+  }
+  .el-table .DisabledSelection .cell:after {
+    content: "全选";
+    position: absolute;
+    left: 0px;
+  }
+}
+.table-box {
+  .el-tooltip {
+    width: 202px;
+  }
+  background: #fff;
+  box-sizing: border-box;
+  .img {
+    width: 28px;
+    height: 28px;
+    border-radius: 14px;
+    object-fit: cover;
+  }
+  .optionBtn {
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    color: #1890ff;
+  }
+  .optionBtnDel {
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    color: #f53131;
+  }
+}
+.btn {
+  width: 65px;
+  height: 32px;
+  padding: 0;
+  line-height: 32px;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 2px;
+  border: 1px solid #d2d2d2;
+  font-size: 14px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #666666;
+}
+.btn.confirm {
+  background: #1890ff;
+  border: 1px solid #1890ff;
+  // border: none;
+  color: #ffffff;
+  margin-left: 8px;
+}
+</style>

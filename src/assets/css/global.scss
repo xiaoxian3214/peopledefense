@@ -1,0 +1,95 @@
+// 全局input样式
+// 多选框选中时字体颜色
+.el-checkbox__input.is-checked+.el-checkbox__label {
+    font-size: 14px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: #333333;
+    line-height: 20px;
+}
+
+.el-select,
+.el-date-editor,
+.el-cascader {
+    min-height: 32px;
+    font-family: NotoSansHans-Medium;
+    width: 100% !important;
+}
+
+.el-textarea__inner {
+    resize: none;
+}
+
+.el-cascader .el-input {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.el-input__inner {
+    border: 1px solid #EFF2F8;
+    border-radius: 4px;
+    height: 100%;
+    min-height: 32px;
+    font-family: NotoSansHans-Medium;
+    width: 100% !important;
+}
+.el-textarea__inner{
+    border: 1px solid #EFF2F8;
+    height: 100% !important;
+}
+
+.el-input__icon {
+    line-height: initial;
+}
+.el-cascader{
+    line-height: 32px;
+}
+.el-textarea__inner {
+    height: 96px;
+}
+
+.el-form-item,
+.el-form-item__content,
+.el-form-item__label {
+    min-height: 32px;
+    line-height: 32px;
+}
+
+.el-form-item {
+    margin-bottom: 24px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+// 全局表单label样式
+
+.el-form-item__label {
+    font-family: NotoSansHans-Medium;
+    font-size: 14px;
+    color: #333333;
+    font-weight: 550;
+    padding: 0 30px 0 0;
+}
+
+
+.el-checkbox__input.is-checked .el-checkbox__inner,
+.el-checkbox__input.is-indeterminate .el-checkbox__inner {
+    background-color: #1890FF;
+    border-color: #1890FF;
+}
+
+.el-tooltip__popper {
+    max-width: 80% !important;
+}
+
+.el-avatar>img {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+tableListBox {
+    padding: 0;
+}

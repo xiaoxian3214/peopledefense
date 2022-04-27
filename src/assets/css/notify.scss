@@ -1,0 +1,22 @@
+.el-notification {
+    min-width: 168px!important;
+    height: 88px!important;
+    right: 50%!important;
+    width: auto;
+    max-width: 360px;
+    box-sizing: border-box;
+    transform: translateX(50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    .el-notification__icon.el-icon-success {
+        color: #95C7F4;
+    }
+    .el-notification__title {
+        font-size: 16px;
+        font-family: PingFangSC-Medium, PingFang SC;
+        font-weight: 550;
+        color: #000000;
+    }
+}

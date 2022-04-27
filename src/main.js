@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2022-01-06 11:01:52
+ * @LastEditTime: 2022-04-27 23:45:24
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: /peopledefense/src/main.js
+ */
 import Vue from 'vue';
 import md5 from 'md5';
 import App from './App.vue';
@@ -19,6 +27,9 @@ import 'quill/dist/quill.core.css' // import styles
 import 'quill/dist/quill.snow.css' // for snow theme
 import 'quill/dist/quill.bubble.css' // for bubble theme
 import VueQuillEditor from 'vue-quill-editor'
+import permission from './directives'
+//注册自定义指令
+Vue.use(permission)
 // import zzd from "../src/vendors/zzd 2/index.js"
 Vue.use(VueQuillEditor, /* { default global options } */)
 // app.use(zzd, {

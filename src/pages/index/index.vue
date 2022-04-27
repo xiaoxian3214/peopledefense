@@ -8,7 +8,7 @@
       是县人防办且是联络员 $store.state.roleIdList.includes(4) && $store.state.roleIdList.includes(2) && $store.state.roleIdList.length == 2 -->
       <Area @getindex="getindex" v-if="isLook()" />
       <div class="BREAD">队员信息</div>
-
+  
 
       
       <div>
